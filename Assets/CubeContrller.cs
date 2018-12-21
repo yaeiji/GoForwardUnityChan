@@ -36,7 +36,7 @@ public class CubeContrller : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 		//Debug.Log("a");
 		if (other.gameObject.tag != "Unitychan") {
-			sound.PlayOneShot (sound.clip);
+			sound.Play();
 		//	Debug.Log("a");
 		} 
 

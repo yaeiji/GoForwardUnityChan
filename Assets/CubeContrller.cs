@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CubeContrller : MonoBehaviour {
 
@@ -32,10 +33,11 @@ public class CubeContrller : MonoBehaviour {
 		
 	}
 
-	void OnCollision2DEnter(GameObject other){
-		Debug.Log("a");
+	void OnCollisionEnter2D(Collision2D other){
+		//Debug.Log("a");
 		if (other.gameObject.tag != "Unitychan") {
-			sound.Play ();
+			sound.PlayOneShot (sound.clip);
+		//	Debug.Log("a");
 		} 
 
 	}
